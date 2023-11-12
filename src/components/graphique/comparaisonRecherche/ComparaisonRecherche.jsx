@@ -120,7 +120,7 @@ function ComparaisonRecherche() {
                     <div className="input-container">
                         <input
                             type="number"
-                            placeholder="Taille des données"
+                            placeholder="Veuillez rentrer une valeur..."
                             value={tailleDonnees}
                             onChange={(e) =>
                                 setTailleDonnees(e.target.value)
@@ -138,7 +138,7 @@ function ComparaisonRecherche() {
                     <div className="input-container">
                         <input
                             type="number"
-                            placeholder="Taille des données"
+                            placeholder="Veuillez rentrer une valeur..."
                             value={tailleDonnees}
                             onChange={(e) =>
                                 setTailleDonnees(e.target.value)

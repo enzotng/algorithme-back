@@ -131,7 +131,7 @@ function ComparaisonTri() {
                     <div className="input-container">
                         <input
                             type="number"
-                            placeholder="Taille des données"
+                            placeholder="Veuillez rentrer une valeur..."
                             value={tailleDonneesTriFusion}
                             onChange={(e) =>
                                 setTailleDonneesTriFusion(e.target.value)
@@ -146,7 +146,7 @@ function ComparaisonTri() {
                     <div className="input-container">
                         <input
                             type="number"
-                            placeholder="Taille des données"
+                            placeholder="Veuillez rentrer une valeur..."
                             value={tailleDonneesTriBulles}
                             onChange={(e) =>
                                 setTailleDonneesTriBulles(e.target.value)
@@ -161,7 +161,7 @@ function ComparaisonTri() {
                     <div className="input-container">
                         <input
                             type="number"
-                            placeholder="Taille des données"
+                            placeholder="Veuillez rentrer une valeur..."
                             value={tailleDonneesTriInsertion}
                             onChange={(e) =>
                                 setTailleDonneesTriInsertion(e.target.value)
