@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Loominaire";
+  src: url("../public/fonts/Loominaire-Regular.woff2") format("woff2"),
+    url("../public/fonts/Loominaire-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --black-color: #7978e9;
+  --white-color: #ffffff;
+  --box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  padding: 50px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: 1rem;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+
+  &::before {
+    content: "";
+    background: url("../public/images/bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+
+#root,
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  min-height: calc(100vh - 100px);
+  min-height: calc(100dvh - 100px);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  input,
+  button {
+    background: var(--white-color);
+    padding: 8px 12px;
+    border: 2px solid var(--black-color);
+    border-radius: 5px;
+    color: var(--black-color);
+    transition: all 0.3s;
+    cursor: pointer;
+    &::placeholder {
+      color: var(--black-color);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    box-shadow: 0.1em 0.1em;
+    &:hover {
+      transform: translate(-1.5px, -1.5px);
+      box-shadow: 0.15em 0.15em;
+    }
+    &:active {
+      transform: translate(0.05em, 0.05em);
+      box-shadow: 0.05em 0.05em;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  @media screen and (max-width: 600px) {
+    th,
+    td {
+      display: block;
+      width: 100%;
+    }
+
+    th {
+      text-align: center;
+    }
+  }
+}
